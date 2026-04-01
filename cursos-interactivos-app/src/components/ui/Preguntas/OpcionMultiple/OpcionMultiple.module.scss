@@ -1,0 +1,120 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.texto {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--letra-titulo);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+%opcion-base {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-radius: 12px;
+  border: 2px solid var(--color-bordes);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-texto);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(4px);
+}
+
+.opcion {
+  @extend %opcion-base;
+  &:hover:not(:disabled) {
+    border-color: var(--color-primario);
+    background: rgba(0, 93, 157, 0.15);
+    transform: translateX(4px);
+  }
+}
+
+.seleccionada {
+  @extend %opcion-base;
+  border-color: var(--color-primario);
+  background: rgba(0, 93, 157, 0.25);
+  transform: translateX(4px);
+}
+
+.correcta {
+  @extend %opcion-base;
+  border-color: #28a745;
+  background: rgba(40, 167, 69, 0.2);
+  cursor: default;
+}
+
+.incorrecta {
+  @extend %opcion-base;
+  border-color: #dc3545;
+  background: rgba(220, 53, 69, 0.2);
+  cursor: default;
+}
+
+.letra {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-primario);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.botonConfirmar {
+  padding: 0.7rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  background: var(--color-acento);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+
+  &:hover { background: var(--color-acento-oscuro); transform: scale(1.03); }
+}
+
+.feedbackCorrecto {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.feedbackIncorrecto {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dc3545;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(220, 53, 69, 0.1);
+  text-align: center;
+}

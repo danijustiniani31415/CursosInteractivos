@@ -1,0 +1,38 @@
+.resultadosContainer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+  border: 3px solid var(--color-primario);
+  border-radius: 10px;
+  background-color: rgba(0, 93, 157, 0.08);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.correcto {
+  color: #107c10;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.incorrecto {
+  color: #d13438;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.botonReiniciar {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background-color: var(--color-primario);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover { background-color: var(--color-primario-oscuro); }
+}

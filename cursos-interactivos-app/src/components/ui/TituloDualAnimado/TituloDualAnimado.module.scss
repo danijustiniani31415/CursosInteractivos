@@ -1,0 +1,68 @@
+.contenedor {
+  position: relative;
+  width: 100%;
+  padding-top: 1cm;
+  box-sizing: border-box;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  user-select: none;
+}
+
+.filaTitulos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+.textoIzquierdo {
+  flex: 1;
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--letra-titulo);
+  white-space: nowrap;
+  animation: izquierdaDesdeCentro 1.2s forwards;
+}
+
+.textoDerecho {
+  flex: 1;
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--letra-titulo);
+  white-space: nowrap;
+  animation: derechaDesdeCentro 1.2s forwards;
+}
+
+.lineaAnimada {
+  width: 98%;
+  height: 2px;
+  background-color: var(--letra-titulo);
+  margin-top: 0.1rem;
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: expandirLinea 1s forwards ease-in-out;
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+@keyframes expandirLinea {
+  to { transform: scaleX(1); }
+}
+
+@keyframes izquierdaDesdeCentro {
+  0% { transform: translateX(50%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes derechaDesdeCentro {
+  0% { transform: translateX(-50%); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}

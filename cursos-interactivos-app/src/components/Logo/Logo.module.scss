@@ -1,0 +1,17 @@
+.logoContainer {
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  pointer-events: none;
+  user-select: none;
+}
+
+.small .logo { max-height: 32px; }
+.medium .logo { max-height: 48px; }
+.large .logo { max-height: 72px; }

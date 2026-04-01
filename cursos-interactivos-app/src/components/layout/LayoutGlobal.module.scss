@@ -1,0 +1,28 @@
+.appContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.logoTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 8px;
+  z-index: 20;
+}
+
+.mainContent {
+  position: relative;
+  z-index: 10;
+  padding: 24px;
+  min-height: 100vh;
+}
+
+.themeToggleWrapper {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 200;
+}

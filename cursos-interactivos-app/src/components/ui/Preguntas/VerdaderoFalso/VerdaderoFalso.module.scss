@@ -1,0 +1,114 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.texto {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--letra-titulo);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.botones {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+%btn-base {
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 160px;
+}
+
+.opcion {
+  @extend %btn-base;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-texto);
+  border-color: var(--color-bordes);
+
+  &:hover:not(:disabled) { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+}
+
+.seleccionada {
+  @extend %btn-base;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.correcta {
+  @extend %btn-base;
+  background: rgba(40, 167, 69, 0.25);
+  border-color: #28a745;
+  color: #28a745;
+  cursor: default;
+}
+
+.incorrecta {
+  @extend %btn-base;
+  background: rgba(220, 53, 69, 0.2);
+  border-color: #dc3545;
+  color: #dc3545;
+  cursor: default;
+}
+
+.verdadero {
+  background: rgba(40, 167, 69, 0.15);
+  border-color: #28a745;
+  color: #28a745;
+  &:hover:not(:disabled) { background: rgba(40, 167, 69, 0.3); }
+}
+
+.falso {
+  background: rgba(220, 53, 69, 0.15);
+  border-color: #dc3545;
+  color: #dc3545;
+  &:hover:not(:disabled) { background: rgba(220, 53, 69, 0.3); }
+}
+
+.botonConfirmar {
+  padding: 0.7rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  background: var(--color-acento);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+
+  &:hover { background: var(--color-acento-oscuro); transform: scale(1.03); }
+}
+
+.feedbackCorrecto {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #28a745;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(40, 167, 69, 0.1);
+}
+
+.feedbackIncorrecto {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #dc3545;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  background: rgba(220, 53, 69, 0.1);
+  text-align: center;
+}

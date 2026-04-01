@@ -1,0 +1,54 @@
+.burbuja {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow:
+    inset -8px -8px 15px rgba(255, 255, 255, 0.6),
+    inset 8px 8px 15px rgba(0, 0, 0, 0.2),
+    0 5px 20px rgba(0, 0, 0, 0.3);
+  will-change: transform, opacity;
+  animation-fill-mode: both;
+}
+
+.vertical {
+  animation-name: subir-burbuja;
+  animation-timing-function: ease-in-out;
+}
+
+.oscilacion {
+  animation-name: oscilacionVertical;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.scale {
+  animation-name: escalar-burbuja;
+  animation-iteration-count: infinite;
+}
+
+.fade {
+  animation-name: fade-burbuja;
+  animation-iteration-count: infinite;
+}
+
+@keyframes subir-burbuja {
+  0% { transform: translateY(100vh) scale(1); opacity: 0.8; }
+  100% { transform: translateY(-100vh) scale(1.2); opacity: 0.1; }
+}
+
+@keyframes escalar-burbuja {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+}
+
+@keyframes fade-burbuja {
+  0%, 100% { opacity: 0.1; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.3); }
+}
+
+@keyframes oscilacionVertical {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(10px); }
+}

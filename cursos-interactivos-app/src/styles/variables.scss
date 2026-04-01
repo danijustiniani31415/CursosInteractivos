@@ -1,0 +1,114 @@
+/* ====================================================
+   VARIABLES CSS GLOBALES – CursosInteractivos
+   ==================================================== */
+
+/* MODO CLARO */
+:root {
+  --color-primario: #005d9d;
+  --color-primario-claro: #3390c9;
+  --color-primario-muy-claro: #99c7e5;
+  --color-primario-oscuro: #004070;
+
+  --color-acento: #85bf00;
+  --color-acento-claro: #b5db4d;
+  --color-acento-oscuro: #6c9a00;
+  --color-verde-suave: #b5db4d;
+
+  --color-fondo: #ffffff;
+  --color-texto: #333333;
+  --color-texto-invertido: #ffffff;
+  --color-bordes: #e0e0e0;
+  --color-blanco: #ffffff;
+  --color-fondo-translucido: rgba(255, 255, 255, 0.15);
+
+  --toggle-claro-fondo: #e6eff6;
+  --toggle-claro-thumb: #ffffff;
+  --toggle-claro-icono: var(--color-primario);
+
+  --letra-titulo: var(--color-primario);
+  --font-size-titulo: 3rem;
+  --font-size-subtitulo: 2rem;
+
+  --padding-left-titulo: 6rem;
+  --padding-left-subtitulo: 12rem;
+  --padding-left-mobile: 2rem;
+
+  --button-padding-vertical: 0.75rem;
+  --button-padding-horizontal: 2rem;
+  --button-font-size: 1.1rem;
+  --button-border-radius: 9999px;
+  --button-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  --button-hover-bg: rgba(0, 0, 0, 0.1);
+
+  --btn-bg-primary: #007bff;
+  --btn-bg-primary-hover: #0056b3;
+  --btn-text-primary: #ffffff;
+
+  --btn-bg-secondary: #6c757d;
+  --btn-bg-secondary-hover: #5a6268;
+  --btn-text-secondary: #ffffff;
+
+  --btn-bg-success: #28a745;
+  --btn-bg-success-hover: #1e7e34;
+  --btn-text-success: #ffffff;
+
+  --btn-bg-danger: #dc3545;
+  --btn-bg-danger-hover: #a71d2a;
+  --btn-text-danger: #ffffff;
+
+  --bubble-color: rgba(0, 93, 157, 0.2);
+  --bubble-size: 40px;
+
+  --burbuja-azul-1: rgba(0, 120, 212, 0.6);
+  --burbuja-azul-2: rgba(0, 64, 112, 0.8);
+  --burbuja-azul-3: rgba(51, 144, 201, 0.5);
+  --burbuja-azul-4: rgba(0, 93, 157, 0.7);
+  --burbuja-azul-oscuro: rgba(0, 40, 80, 0.9);
+  --burbuja-azul-brillante: rgba(100, 180, 255, 0.5);
+
+  --fondo-gradiente: linear-gradient(135deg, #f0f5fa 0%, #d9e6f5 50%, #b0cce7 100%);
+}
+
+/* MODO OSCURO */
+.modo-oscuro {
+  --color-fondo: #121212;
+  --color-texto: #f5f5f5;
+  --color-texto-invertido: #121212;
+  --color-bordes: #444444;
+  --color-blanco: #f5f5f5;
+  --color-fondo-translucido: rgba(0, 0, 0, 0.25);
+
+  --color-primario: #3390c9;
+  --color-primario-oscuro: #004070;
+  --color-verde-suave: #a2c039;
+  --color-acento: #6c9a00;
+  --letra-titulo: #f5f5f5;
+
+  --btn-bg-primary: #339af0;
+  --btn-bg-primary-hover: #1c7ed6;
+  --btn-text-primary: #e0e0e0;
+
+  --btn-bg-secondary: #495057;
+  --btn-bg-secondary-hover: #343a40;
+  --btn-text-secondary: #e0e0e0;
+
+  --btn-bg-success: #2f9e44;
+  --btn-bg-success-hover: #1c7c2a;
+  --btn-text-success: #d3f9d8;
+
+  --btn-bg-danger: #e03131;
+  --btn-bg-danger-hover: #b02a2a;
+  --btn-text-danger: #f8d7da;
+
+  --button-hover-bg: rgba(255, 255, 255, 0.1);
+  --color-borde-boton: var(--color-primario);
+
+  --bubble-color: rgba(51, 144, 255, 0.1);
+
+  --burbuja-azul-1: rgba(100, 180, 255, 0.4);
+  --burbuja-azul-2: rgba(51, 144, 255, 0.6);
+  --burbuja-azul-3: rgba(0, 120, 212, 0.4);
+  --burbuja-azul-4: rgba(0, 93, 157, 0.5);
+  --burbuja-azul-oscuro: rgba(0, 40, 80, 0.7);
+  --burbuja-azul-brillante: rgba(150, 200, 255, 0.4);
+}
